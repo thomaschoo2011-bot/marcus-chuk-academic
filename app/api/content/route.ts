@@ -1,0 +1,1 @@
+import{NextResponse}from"next/server";import{list}from"@/lib/store";export const dynamic="force-dynamic";export async function GET(){try{return NextResponse.json({items:await list()})}catch{return NextResponse.json({items:[]})}}
